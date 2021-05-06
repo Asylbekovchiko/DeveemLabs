@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/store_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:text="58 stores Open"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_main"
+        android:layout_width="388dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/store_open"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/title_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="BurgerCase"
+        android:maxLines="2"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_main" />
+
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:src="@drawable/po"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/status"
+        app:layout_constraintTop_toTopOf="@id/status"
+        app:layout_constraintBottom_toBottomOf="@id/status"
+        tools:layout_editor_absoluteY="277dp"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="48dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="18dp"
+        android:textSize="18sp"
+        android:text="OPEN"
+        android:textColor="@color/light_green"
+        app:layout_constraintStart_toEndOf="@+id/title_main"
+        app:layout_constraintTop_toBottomOf="@+id/image_main" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/star"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/stars"
+        app:layout_constraintEnd_toStartOf="@+id/stars"
+        app:layout_constraintTop_toTopOf="@id/stars"
+        android:contentDescription="TODO"></ImageView>
+
+    <TextView
+        android:id="@+id/stars"
+        android:layout_width="25dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="8dp"
+        android:text="4.6"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_main" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:textSize="15sp"
+        android:text="(601)"
+        android:textColor="#838383"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/stars"
+        app:layout_constraintTop_toBottomOf="@+id/title_main" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        android:text="American"
+        android:textColor="#838383"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/comments"
+        app:layout_constraintTop_toTopOf="@+id/comments" />
+
+    <ImageView
+        android:layout_width="6dp"
+        android:layout_height="11dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/point"
+        app:layout_constraintBottom_toBottomOf="@+id/type"
+        app:layout_constraintEnd_toStartOf="@+id/food_text"
+        app:layout_constraintStart_toEndOf="@+id/type"
+        app:layout_constraintTop_toTopOf="@id/type" />
+
+    <TextView
+        android:id="@+id/food_text"
+        android:layout_width="50dp"
+        android:layout_height="18dp"
+        android:textSize="15sp"
+        android:text="Burgers"
+        android:textColor="#838383"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/type"
+        app:layout_constraintTop_toTopOf="@+id/comments" />
+
+    <TextView
+        android:id="@+id/cook_time"
+        android:layout_width="84dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/orange"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="15-20 min"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="74dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="1.5km away"
+        android:maxLines="2"
+        android:textColor="#838383"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/food_text"
+        app:layout_constraintTop_toBottomOf="@+id/cook_time" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/curs"
+        android:layout_marginEnd="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/distance"
+        app:layout_constraintEnd_toStartOf="@+id/distance"
+        app:layout_constraintTop_toTopOf="@id/distance"></ImageView>
+
+    <TextView
+        android:id="@+id/delivery_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:text="Delivery: FREE"
+        android:textColor="#838383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stars">
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="6dp"
+        android:layout_height="11dp"
+        android:src="@drawable/point"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_text"
+        app:layout_constraintEnd_toStartOf="@+id/price_text"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toEndOf="@+id/delivery_text"
+        app:layout_constraintTop_toTopOf="@id/price_text" />
+
+    <TextView
+        android:id="@+id/price_text"
+        android:layout_width="77dp"
+        android:layout_height="14dp"
+        android:textSize="12sp"
+        android:text="Minimum:$10"
+        android:textColor="#838383"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/delivery_text"
+        app:layout_constraintTop_toBottomOf="@+id/type" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
