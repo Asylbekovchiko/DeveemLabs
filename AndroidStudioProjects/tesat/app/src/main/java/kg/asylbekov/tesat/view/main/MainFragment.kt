@@ -11,16 +11,12 @@ import androidx.core.view.iterator
 import androidx.databinding.DataBindingUtil
 import kg.asylbekov.tesat.R
 import kg.asylbekov.tesat.databinding.FragmentMainBinding
+import kg.asylbekov.tesat.model.CategoriesModel
+import kg.asylbekov.tesat.model.Main
+import kg.asylbekov.tesat.model.TypeOfModels
 import kg.asylbekov.tesat.view.main.adapter.CategoriesAdapter
 import kg.asylbekov.tesat.view.main.adapter.MainAdapter
 import kg.asylbekov.tesat.view.main.adapter.TypeAdapter
-import kg.asylbekov.tesat.view.main.mainviewmodel.MainModel
-import kg.asylbekov.tesat.view.main.mainviewmodel.MainViewModel
-import kg.asylbekov.tesat.view.main.mainviewmodel.TypeModel
-import kotlinx.android.synthetic.main.categories_item.*
-import kotlinx.android.synthetic.main.categories_item.view.*
-import kotlinx.android.synthetic.main.type_items.*
-
 class MainFragment : Fragment(), CategoriesAdapter.clickCateegories, TypeAdapter.onClickType {
 
     private lateinit var binding: FragmentMainBinding
@@ -28,9 +24,9 @@ class MainFragment : Fragment(), CategoriesAdapter.clickCateegories, TypeAdapter
     private lateinit var adapterType: TypeAdapter
     private lateinit var adapterMain: MainAdapter
 
-    private lateinit var list: ArrayList<MainViewModel>
-    private lateinit var listType: ArrayList<TypeModel>
-    private lateinit var listMain: ArrayList<MainModel>
+    private lateinit var list: ArrayList<CategoriesModel>
+    private lateinit var listType: ArrayList<TypeOfModels>
+    private lateinit var listMain: ArrayList<Main>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,7 +58,7 @@ class MainFragment : Fragment(), CategoriesAdapter.clickCateegories, TypeAdapter
 
 
         listMain.add(
-            MainModel(
+            Main(
                 "https://assets.website-files.com/5efb74169727e718917b6fed/602b8b743f125ca2addc5276_fastfood.jpg",
                 "58 open Stores",
                 "Burger Craze",
@@ -80,7 +76,7 @@ class MainFragment : Fragment(), CategoriesAdapter.clickCateegories, TypeAdapter
             )
         )
         listMain.add(
-            MainModel(
+            Main(
                 "https://freshwindhotel.ru/images/catalog/images/menu/9.png",
                 "",
                 "Vegetarian Pizza",
@@ -98,55 +94,55 @@ class MainFragment : Fragment(), CategoriesAdapter.clickCateegories, TypeAdapter
         )
 
 
-        list.add(MainViewModel("Delivery"))
-        list.add(MainViewModel("PickUp"))
-        list.add(MainViewModel("Catering"))
-        list.add(MainViewModel("Curbside"))
-        list.add(MainViewModel("Curbside"))
-        list.add(MainViewModel("Curbside"))
-        list.add(MainViewModel("Curbside"))
-        list.add(MainViewModel("Curbside"))
+        list.add(CategoriesModel("Delivery"))
+        list.add(CategoriesModel("PickUp"))
+        list.add(CategoriesModel("Catering"))
+        list.add(CategoriesModel("Curbside"))
+        list.add(CategoriesModel("Curbside"))
+        list.add(CategoriesModel("Curbside"))
+        list.add(CategoriesModel("Curbside"))
+        list.add(CategoriesModel("Curbside"))
 
 
 
         listType.add(
-            TypeModel(
+            TypeOfModels(
                 "Takeaway",
                 "https://22carrots.com/wp-content/uploads/2020/07/amirali-mirhashemian-UH-fIND9svQ-unsplash-1155x770.jpg"
             )
         )
         listType.add(
-            TypeModel(
+            TypeOfModels(
                 "Grocery",
                 "https://scontent.ffru9-1.fna.fbcdn.net/v/t1.6435-9/p960x960/173215511_3841740742600677_1216577823839042941_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=730e14&_nc_ohc=4i8yB8jT-qwAX9-zGxr&_nc_ht=scontent.ffru9-1.fna&tp=6&oh=09c1f320ecc225b141522de90b5f5e23&oe=60B93699"
             )
         )
         listType.add(
-            TypeModel(
+            TypeOfModels(
                 "Convince",
                 "https://scontent.ffru9-1.fna.fbcdn.net/v/t1.6435-9/121473621_701767833756880_8753318727420226737_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=973b4a&_nc_ohc=JBngpaxsCVAAX-PZQmG&_nc_ht=scontent.ffru9-1.fna&oh=241773c578a024eaacfc672dec6388a6&oe=60B6ED29"
             )
         )
         listType.add(
-            TypeModel(
+            TypeOfModels(
                 "Pharmacy",
                 "https://novyny.24tv.ua/resources/photos/news/660x371_DIR/202103/1558373.jpg?202103150940&q=65"
             )
         )
         listType.add(
-            TypeModel(
+            TypeOfModels(
                 "MusicStore",
                 "https://www.spottedbylocals.com/cologne/files/music-store-cologne-by-stephan-wehrle.jpg"
             )
         )
         listType.add(
-            TypeModel(
+            TypeOfModels(
                 "BookShop",
                 "https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2020/11/04035636/Bookshop.jpg"
             )
         )
         listType.add(
-            TypeModel(
+            TypeOfModels(
                 "Bakery",
                 "https://i.pinimg.com/originals/57/32/f8/5732f82afbd1e250b0b6307ce63dfd4f.jpg"
             )

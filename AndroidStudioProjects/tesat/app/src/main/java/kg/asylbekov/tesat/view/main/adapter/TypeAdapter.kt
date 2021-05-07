@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kg.asylbekov.tesat.R
-import kg.asylbekov.tesat.view.main.mainviewmodel.TypeModel
+import kg.asylbekov.tesat.model.TypeOfModels
 import kotlinx.android.synthetic.main.type_items.view.*
 
-class TypeAdapter (var list: ArrayList<TypeModel>, val click: onClickType): RecyclerView.Adapter<TypeAdapter.TypeVH>(){
+class TypeAdapter (var list: ArrayList<TypeOfModels>, val click: onClickType): RecyclerView.Adapter<TypeAdapter.TypeVH>(){
 
     class TypeVH(view: View) : RecyclerView.ViewHolder(view){
-        fun onBind(model: TypeModel, onClickType: onClickType){
+        fun onBind(model: TypeOfModels, onClickType: onClickType){
             itemView.title_te.text = model.title
             Glide.with(itemView.context).load(model.imageUrl).centerCrop().into(itemView.circle_images)
             itemView.setOnClickListener {

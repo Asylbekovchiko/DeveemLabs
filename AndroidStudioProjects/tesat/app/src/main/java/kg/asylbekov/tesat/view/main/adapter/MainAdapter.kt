@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kg.asylbekov.tesat.R
-import kg.asylbekov.tesat.view.main.mainviewmodel.MainModel
+import kg.asylbekov.tesat.model.Main
 import kotlinx.android.synthetic.main.main_items.view.*
 
-class MainAdapter(var list: ArrayList<MainModel>) : RecyclerView.Adapter<MainAdapter.MainVH>() {
+class MainAdapter(var list: ArrayList<Main>) : RecyclerView.Adapter<MainAdapter.MainVH>() {
 
     class MainVH(view: View) : RecyclerView.ViewHolder(view) {
-        fun onBind(viemodel: MainModel) {
+        fun onBind(viemodel: Main) {
             itemView.store_open.text = viemodel.openStores
             Glide.with(itemView.context).load(viemodel.imageUrl).centerCrop().placeholder(R.drawable.ic_launcher_background).into(itemView.image_main)
             itemView.title_main.text = viemodel.title

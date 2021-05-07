@@ -7,16 +7,16 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kg.asylbekov.tesat.R
-import kg.asylbekov.tesat.view.main.mainviewmodel.MainViewModel
+import kg.asylbekov.tesat.model.CategoriesModel
 import kotlinx.android.synthetic.main.categories_item.view.*
 
 
-class CategoriesAdapter(var listss: ArrayList<MainViewModel>, val clickCat: clickCateegories) : RecyclerView.Adapter<CategoriesAdapter.CategoriesVH>() {
+class CategoriesAdapter(var listss: ArrayList<CategoriesModel>, val clickCat: clickCateegories) : RecyclerView.Adapter<CategoriesAdapter.CategoriesVH>() {
 
 
     class CategoriesVH(val view: View) : RecyclerView.ViewHolder(view) {
         @SuppressLint("ResourceAsColor")
-        fun onBind(main: MainViewModel, clickCat: clickCateegories) {
+        fun onBind(main: CategoriesModel, clickCat: clickCateegories) {
             itemView.findViewById<TextView>(R.id.text_cat).text = main.name
             itemView.setOnClickListener {
                 clickCat.clickCat()

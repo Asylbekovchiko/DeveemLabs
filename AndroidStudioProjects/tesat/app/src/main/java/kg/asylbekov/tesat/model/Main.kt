@@ -1,15 +1,6 @@
-package kg.asylbekov.tesat.view.main.mainviewmodel
+package kg.asylbekov.tesat.model
 
-data class MainViewModel(
-        var name : String? = null,
-        var isChecked : Boolean? = null
-)
-
-data class TypeModel(
-    var title: String? = null,
-    var imageUrl: String? = null
-)
-data class MainModel(
+data class Main(
     var imageUrl: String? = null,
     var openStores: String? = null,
     var title: String? = null,
@@ -22,5 +13,4 @@ data class MainModel(
     var price: String? = null,
     var distance: String? =null,
     var time: String? = null,
-var delivery: String? = null
-)
+    var delivery: String? = null )
